@@ -112,3 +112,37 @@ fun Formulir(
                         }
                     }
 
+                    // Ukuran Cangkir
+                    Text("UKURAN CANGKIR", fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                    ExposedDropdownMenuBox(
+                        expanded = expandedUkuran,
+                        onExpandedChange = { expandedUkuran = !expandedUkuran }
+                    ) {
+                        OutlinedTextField(
+                            value = ukuranCangkir,
+                            onValueChange = {},
+                            readOnly = true,
+                            placeholder = { Text("Pilih ukuran") },
+                            trailingIcon = {
+                                ExposedDropdownMenuDefaults.TrailingIcon(expanded = expandedUkuran)
+                            },
+                            modifier = Modifier
+                                .menuAnchor()
+                                .fillMaxWidth()
+                        )
+                        ExposedDropdownMenu(
+                            expanded = expandedUkuran,
+                            onDismissRequest = { expandedUkuran = false }
+                        ) {
+                            ukuranList.forEach { size ->
+                                DropdownMenuItem(
+                                    text = { Text(size) },
+                                    onClick = {
+                                        ukuranCangkir = size
+                                        expandedUkuran = false
+                                    }
+                                )
+                            }
+                        }
+                    }
+
