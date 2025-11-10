@@ -188,3 +188,38 @@ fun Formulir(
             }
         }
 
+        // ===== Dialog Berhasil =====
+        if (showDialog) {
+            AlertDialog(
+                onDismissRequest = { showDialog = false },
+                containerColor = Color(0xFF795548),
+                title = {
+                    Text(
+                        text = "Pesanan Berhasil!",
+                        color = Color.White,
+                        fontWeight = FontWeight.Bold
+                    )
+                },
+                text = {
+                    Column {
+                        Text("Nama: $namaPelanggan", color = Color.White)
+                        Text("Kopi: $jenisKopi", color = Color.White)
+                        Text("Ukuran: $ukuranCangkir", color = Color.White)
+                        if (catatanTambahan.isNotBlank())
+                            Text("Catatan: $catatanTambahan", color = Color.White)
+                    }
+                },
+                confirmButton = {
+                    Button(
+                        onClick = {
+                            showDialog = false
+                            OnSubmitBtnClick()
+                        },
+                        colors = ButtonDefaults.buttonColors(containerColor = Color.White)
+                    ) {
+                        Text("OK", color = Color(0xFF795548))
+                    }
+                }
+            )
+        }
+
