@@ -108,3 +108,34 @@ fun ListData(
                                 }
 
                                 Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.SpaceBetween
+                                ) {
+                                    Column {
+                                        Text(
+                                            "UKURAN CUP",
+                                            fontWeight = FontWeight.Bold,
+                                            color = Color(0xFF795548),
+                                            fontSize = 12.sp
+                                        )
+                                        Text(data[2], fontSize = 14.sp, color = Color.Black)
+                                    }
+
+                                    Column(horizontalAlignment = Alignment.End) {
+                                        Text(
+                                            "PEMBAYARAN",
+                                            fontWeight = FontWeight.Bold,
+                                            color = Color(0xFF795548),
+                                            fontSize = 12.sp
+                                        )
+                                        Text(data[3], fontSize = 14.sp, color = Color.Black)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
