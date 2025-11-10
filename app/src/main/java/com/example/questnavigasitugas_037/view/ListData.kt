@@ -63,3 +63,48 @@ fun ListData(
 
             Spacer(modifier = Modifier.height(16.dp))
 
+            if (dataList.isEmpty()) {
+                Text("Belum ada pesanan.", color = Color.Gray)
+            } else {
+                LazyColumn(
+                    verticalArrangement = Arrangement.spacedBy(10.dp),
+                    modifier = Modifier.fillMaxSize(),
+                    contentPadding = PaddingValues(bottom = 16.dp)
+                ) {
+                    items(dataList) { data ->
+                        Card(
+                            modifier = Modifier.fillMaxWidth(),
+                            colors = CardDefaults.cardColors(containerColor = Color.White),
+                            shape = RoundedCornerShape(16.dp),
+                            elevation = CardDefaults.cardElevation(defaultElevation = 3.dp)
+                        ) {
+                            Column(
+                                modifier = Modifier.padding(16.dp),
+                                verticalArrangement = Arrangement.spacedBy(10.dp)
+                            ) {
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.SpaceBetween
+                                ) {
+                                    Column {
+                                        Text(
+                                            "NAMA PEMESAN",
+                                            fontWeight = FontWeight.Bold,
+                                            color = Color(0xFF795548),
+                                            fontSize = 12.sp
+                                        )
+                                        Text(data[0], fontSize = 14.sp, color = Color.Black)
+                                    }
+
+                                    Column(horizontalAlignment = Alignment.End) {
+                                        Text(
+                                            "JENIS KOPI",
+                                            fontWeight = FontWeight.Bold,
+                                            color = Color(0xFF795548),
+                                            fontSize = 12.sp
+                                        )
+                                        Text(data[1], fontSize = 14.sp, color = Color.Black)
+                                    }
+                                }
+
+                                Row(
