@@ -22,3 +22,16 @@ import com.example.questnavigasitugas_037.R
 fun Home(
     OnMasukBtnClick: () -> Unit
 ) {
+    Surface(
+        modifier = Modifier.fillMaxSize(),
+        color = Color(0xFFFFF8E1)
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(horizontal = 24.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Top
+        ) {
+            Spacer(modifier = Modifier.height(70.dp))
+
