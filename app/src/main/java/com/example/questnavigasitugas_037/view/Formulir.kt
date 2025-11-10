@@ -48,3 +48,12 @@ fun Formulir(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
 
+            Text(
+                text = "Formulir Pemesanan Kopi",
+                fontSize = 22.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color(0xFF4E342E)
+            )
+
+            Spacer(modifier = Modifier.height(24.dp))
+
