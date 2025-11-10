@@ -64,3 +64,17 @@ fun Formulir(
                 elevation = CardDefaults.cardElevation(6.dp),
                 colors = CardDefaults.cardColors(containerColor = Color.White)
             ) {
+                Column(
+                    modifier = Modifier.padding(20.dp),
+                    verticalArrangement = Arrangement.spacedBy(14.dp)
+                ) {
+                    // Nama Pelanggan
+                    Text("NAMA PELANGGAN", fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                    OutlinedTextField(
+                        value = namaPelanggan,
+                        onValueChange = { namaPelanggan = it },
+                        placeholder = { Text("Masukkan nama pelanggan") },
+                        singleLine = true,
+                        modifier = Modifier.fillMaxWidth()
+                    )
+
