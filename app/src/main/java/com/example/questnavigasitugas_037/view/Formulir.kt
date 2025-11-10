@@ -57,3 +57,10 @@ fun Formulir(
 
             Spacer(modifier = Modifier.height(24.dp))
 
+            // Card Formulir
+            Card(
+                modifier = Modifier.fillMaxWidth(),
+                shape = RoundedCornerShape(16.dp),
+                elevation = CardDefaults.cardElevation(6.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.White)
+            ) {
