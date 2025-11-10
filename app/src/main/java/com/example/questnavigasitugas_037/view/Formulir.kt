@@ -146,3 +146,45 @@ fun Formulir(
                         }
                     }
 
+                    // Catatan Tambahan
+                    Text("CATATAN TAMBAHAN", fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                    OutlinedTextField(
+                        value = catatanTambahan,
+                        onValueChange = { catatanTambahan = it },
+                        placeholder = { Text("Contoh: tanpa gula, extra shot...") },
+                        modifier = Modifier.fillMaxWidth()
+                    )
+
+                    Spacer(modifier = Modifier.height(24.dp))
+
+                    // Tombol Aksi
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(12.dp)
+                    ) {
+                        OutlinedButton(
+                            onClick = OnBackBtnClick,
+                            modifier = Modifier.weight(1f)
+                        ) {
+                            Text("Kembali")
+                        }
+
+                        Button(
+                            onClick = {
+                                if (namaPelanggan.isBlank() || jenisKopi.isBlank() || ukuranCangkir.isBlank()) {
+                                    showWarning = true
+                                } else {
+                                    dataList.add(listOf(namaPelanggan, jenisKopi, ukuranCangkir, catatanTambahan))
+                                    showDialog = true
+                                }
+                            },
+                            modifier = Modifier.weight(1f),
+                            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF795548))
+                        ) {
+                            Text("Pesan", color = Color.White)
+                        }
+                    }
+                }
+            }
+        }
+
