@@ -78,3 +78,37 @@ fun Formulir(
                         modifier = Modifier.fillMaxWidth()
                     )
 
+                    // Jenis Kopi
+                    Text("JENIS KOPI", fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                    ExposedDropdownMenuBox(
+                        expanded = expandedKopi,
+                        onExpandedChange = { expandedKopi = !expandedKopi }
+                    ) {
+                        OutlinedTextField(
+                            value = jenisKopi,
+                            onValueChange = {},
+                            readOnly = true,
+                            placeholder = { Text("Pilih jenis kopi") },
+                            trailingIcon = {
+                                ExposedDropdownMenuDefaults.TrailingIcon(expanded = expandedKopi)
+                            },
+                            modifier = Modifier
+                                .menuAnchor()
+                                .fillMaxWidth()
+                        )
+                        ExposedDropdownMenu(
+                            expanded = expandedKopi,
+                            onDismissRequest = { expandedKopi = false }
+                        ) {
+                            jenisKopiList.forEach { kopi ->
+                                DropdownMenuItem(
+                                    text = { Text(kopi) },
+                                    onClick = {
+                                        jenisKopi = kopi
+                                        expandedKopi = false
+                                    }
+                                )
+                            }
+                        }
+                    }
+
