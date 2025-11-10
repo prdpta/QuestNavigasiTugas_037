@@ -96,3 +96,26 @@ fun Home(
 
             Spacer(modifier = Modifier.weight(1f))
 
+            // Tombol Masuk
+            Button(
+                onClick = OnMasukBtnClick,
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color(0xFF795548),
+                    contentColor = Color.White
+                ),
+                shape = RoundedCornerShape(30.dp),
+                modifier = Modifier
+                    .width(200.dp)
+                    .height(50.dp)
+            ) {
+                Text(
+                    text = "Mulai Pesan",
+                    fontSize = 18.sp,
+                    fontWeight = FontWeight.SemiBold
+                )
+            }
+
+            Spacer(modifier = Modifier.height(40.dp))
+        }
+    }
+}
