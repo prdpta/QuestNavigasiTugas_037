@@ -57,3 +57,23 @@ fun Home(
 
             Spacer(modifier = Modifier.height(20.dp))
 
+            // Nama Aplikasi
+            Text(
+                text = "☕ KopiKu",
+                fontSize = 30.sp,
+                fontWeight = FontWeight.ExtraBold,
+                color = Color(0xFF3E2723),
+                fontFamily = FontFamily.Serif,
+                textAlign = TextAlign.Center
+            )
+
+            Text(
+                text = "Teman Ngopimu Setiap Hari",
+                fontSize = 16.sp,
+                fontWeight = FontWeight.Medium,
+                color = Color(0xFF6D4C41),
+                textAlign = TextAlign.Center
+            )
+
+            Spacer(modifier = Modifier.height(145.dp))
+
