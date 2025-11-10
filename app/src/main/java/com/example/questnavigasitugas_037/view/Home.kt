@@ -47,3 +47,13 @@ fun Home(
 
             Spacer(modifier = Modifier.height(20.dp))
 
+            // Logo Kopi
+            Image(
+                painter = painterResource(id = R.drawable.kopi), // pastikan logo kopi ada di drawable
+                contentDescription = "Logo KopiKu",
+                modifier = Modifier.size(220.dp),
+                contentScale = ContentScale.Fit
+            )
+
+            Spacer(modifier = Modifier.height(20.dp))
+
