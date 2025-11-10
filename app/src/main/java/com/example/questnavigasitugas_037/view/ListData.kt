@@ -20,3 +20,29 @@ fun ListData(
     OnBerandaClick: () -> Unit,
     OnFormulirClick: () -> Unit
 ) {
+    Scaffold(
+        containerColor = Color(0xFFFFF7E6), // warna krem lembut
+        bottomBar = {
+            Row(
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp)
+            ) {
+                OutlinedButton(
+                    onClick = OnBerandaClick,
+                    modifier = Modifier.weight(1f),
+                    shape = RoundedCornerShape(12.dp)
+                ) {
+                    Text("Beranda")
+                }
+
+                OutlinedButton(
+                    onClick = OnFormulirClick,
+                    modifier = Modifier.weight(1f),
+                    shape = RoundedCornerShape(12.dp)
+                ) {
+                    Text("Formulir")
+                }
+            }
+        }
