@@ -21,3 +21,18 @@ fun Formulir(
     OnSubmitBtnClick: () -> Unit,
     OnBackBtnClick: () -> Unit = {}
 ) {
+    // ===== Variabel input =====
+    var namaPelanggan by remember { mutableStateOf("") }
+    var jenisKopi by remember { mutableStateOf("") }
+    var ukuranCangkir by remember { mutableStateOf("") }
+    var catatanTambahan by remember { mutableStateOf("") }
+
+    val jenisKopiList = listOf("Espresso", "Latte", "Cappuccino", "Americano", "Mocca")
+    val ukuranList = listOf("Small", "Medium", "Large")
+
+    var expandedKopi by remember { mutableStateOf(false) }
+    var expandedUkuran by remember { mutableStateOf(false) }
+    var showDialog by remember { mutableStateOf(false) }
+    var showWarning by remember { mutableStateOf(false) }
+
+
