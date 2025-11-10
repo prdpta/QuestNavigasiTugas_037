@@ -223,3 +223,18 @@ fun Formulir(
             )
         }
 
+// ===== Dialog Warning =====
+        if (showWarning) {
+            AlertDialog(
+                onDismissRequest = { showWarning = false },
+                title = { Text("Peringatan") },
+                text = { Text("Harap isi semua data sebelum memesan!") },
+                confirmButton = {
+                    Button(onClick = { showWarning = false }) {
+                        Text("OK")
+                    }
+                }
+            )
+        }
+    }
+}
