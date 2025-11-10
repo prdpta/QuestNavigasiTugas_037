@@ -35,4 +35,16 @@ fun Formulir(
     var showDialog by remember { mutableStateOf(false) }
     var showWarning by remember { mutableStateOf(false) }
 
+    // ===== Tampilan utama =====
+    Scaffold(
+        modifier = Modifier.fillMaxSize(),
+        containerColor = Color(0xFFFFF8E1) // warna krem kopi
+    ) { innerPadding ->
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
+                .padding(horizontal = 24.dp, vertical = 32.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
 
