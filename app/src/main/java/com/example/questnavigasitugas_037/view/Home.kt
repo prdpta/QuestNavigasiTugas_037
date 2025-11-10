@@ -77,3 +77,22 @@ fun Home(
 
             Spacer(modifier = Modifier.height(145.dp))
 
+        // Nama dan NIM
+            Text(
+                text = "Pradipta Pratama Putra",
+                fontSize = 16.sp,
+                fontWeight = FontWeight.Medium,
+                color = Color(0xFF4E342E),
+                textAlign = TextAlign.Center
+            )
+
+            Text(
+                text = "20230140037",
+                fontSize = 15.sp,
+                fontWeight = FontWeight.Normal,
+                color = Color(0xFF4E342E),
+                textAlign = TextAlign.Center
+            )
+
+            Spacer(modifier = Modifier.weight(1f))
+
